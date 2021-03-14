@@ -1,0 +1,31 @@
+{
+  "name": "json-arraystream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ArrayStream.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevin-coelho/ArrayStream.git"
+  },
+  "author": "Kevin Coelho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevin-coelho/ArrayStream/issues"
+  },
+  "homepage": "https://github.com/kevin-coelho/ArrayStream#readme",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "joi": "^17.4.0",
+    "stream": "^0.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chalk": "^4.1.0",
+    "eslint": "^7.22.0",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2"
+  }
+}
