@@ -17,7 +17,7 @@ These can later be read using utilities like https://www.npmjs.com/package/strea
 
 ## Usage
 ```
-const ArrayStream = require('json-arraystream');
+const ArrayStream = require('@kevin-coelho/json-arraystream');
 
 const config = {
 	file: {

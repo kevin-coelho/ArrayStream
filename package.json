@@ -1,5 +1,5 @@
 {
-  "name": "json-arraystream",
+  "name": "@kevin-coelho/json-arraystream",
   "version": "1.0.0",
   "description": "",
   "main": "ArrayStream.js",
