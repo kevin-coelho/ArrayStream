@@ -19,11 +19,13 @@ These can later be read using utilities like https://www.npmjs.com/package/strea
 ```
 const ArrayStream = require('@kevin-coelho/json-arraystream');
 
+// see lib/types.js for config definition
 const config = {
 	file: {
 		folder: './output',
 		keyPattern: 'testFile_$$',
 		fileType: 'json',
+		numDigits: 4, // will create files like output/testFile_0001.json
 	},
 	maxItems: 10,
 	itemValidationSchema: joi
@@ -34,19 +36,25 @@ const config = {
 		.required(),
 	lazy: true,
 };
+
 const out = new ArrayStream(config);
-out.on('error', () => an error occurred);
+out.on('error', () => console.error('an error occurred'));
+
+// write like a normal stream
 out.write({
 	someNumber: 5
 });
+
+// stream produces joi validation error when chunk fails to pass itemValidationSchema
 out.write({
 	foo: 'bar',
-}); // stream produces joi validation error
+});
 
-const hugeArray = [....];
 // out will create a new file testFile_0001.json, testFile_0002.json, ... for every 10 chunks written
+const hugeArray = [....];
 hugeArray.forEach(chunk => out.write(chunk));
-await out.closeArrayStream(); // wait for stream to finish writing and close pipe / file handle
+
+await out.closeArrayStream();
 ```
 
 ## Installation & Test
