@@ -49,7 +49,7 @@ await out.closeArrayStream(); // wait for stream to finish writing and close pip
 ```
 
 ## Installation & Test
-- `npm install json-arraystream`
+- `npm install @kevin-coelho/json-arraystream`
 - `npm run test`
 
 ## Roadmap
