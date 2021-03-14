@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/kevin-coelho/ArrayStream.git"
   },
-  "author": "Kevin Coelho",
+  "author": "Kevin Coelho <kevin@kevincoelho.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kevin-coelho/ArrayStream/issues"
