@@ -44,7 +44,8 @@ out.write({
 }); // stream produces joi validation error
 
 const hugeArray = [....];
-hugeArray.forEach(chunk => out.write(chunk)); // out will create a new file for every 10 chunks written
+// out will create a new file testFile_0001.json, testFile_0002.json, ... for every 10 chunks written
+hugeArray.forEach(chunk => out.write(chunk));
 await out.closeArrayStream(); // wait for stream to finish writing and close pipe / file handle
 ```
 

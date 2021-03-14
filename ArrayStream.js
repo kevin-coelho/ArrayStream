@@ -37,7 +37,9 @@ class ArrayStream extends Writable {
     // try to create validation object from validation schema
     if (this.config.itemValidationSchema) {
       if (!this.config.itemValidationSchema.validate) {
-        throw new Error('config.itemValidationSchema must be a valid joi schema with a .validate method');
+        throw new Error(
+          'config.itemValidationSchema must be a valid joi schema with a .validate method',
+        );
       }
       this.itemValidationSchema = this.config.itemValidationSchema;
     } else {
@@ -217,7 +219,7 @@ class ArrayStream extends Writable {
     this.key =
       this.config.file.keyPattern.replace(
         /\$\$/,
-        this.fileCount.toString().padStart(4, '0'),
+        this.fileCount.toString().padStart(this.config.file.numDigits, '0'),
       ) +
       '.' +
       this.config.file.fileType;
